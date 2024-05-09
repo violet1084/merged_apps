@@ -72,8 +72,8 @@ h3 {
 /* Styling for the slider input form */
 #sliderInputForm {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 24%;
+    right: 6%;
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 5px;
