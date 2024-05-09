@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Parallax_with_Input_Form</title>
+    <link rel="stylesheet" href="stylep.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Parallax Slider with Form</title>
+        <link rel="stylesheet" href="stylep.css">
+    </head>
+
+    <body>
+
+
+        <div id="slider" class="swipe">
+            <div class="swipe-wrap">
+                <div
+                    style="background-image:url(https://cdn.pixabay.com/photo/2019/07/07/11/20/photo-gallery-4322296_640.jpg)">
+                    <h1>the text is placed</h1>
+                    <h2>on layers that are</h2>
+                    <h3>translated on the z-axis</h3>
+                </div>
+
+                <!--               <div style="background-image:url(https://64.media.tumblr.com/968f9a1571786d98cc1a17cf95a82676/e618f7c112927f3f-ed/s540x810/594136197e2c3e599608bedd097d35f463850a90.jpg">
+                <h1>This is a Slide Show</h1>
+                <h2>These should probably be sized differently</h2>
+                <h3>, or perhaps not</h3>
+              </div> -->
+                <!-- Placeholder for dynamically added slides -->
+            </div>
+        </div>
+
+        <div id="slider" class="swipe">
+            <div class="swipe-wrap">
+                <!-- Existing slider sections can be added here -->
+
+            </div>
+        </div>
+
+        <!-- Slider Input Form -->
+        <form id="sliderInputForm">
+            <label for="backgroundImageURL">Background Image URL:</label>
+            <input type="text" id="backgroundImageURL" name="backgroundImageURL" placeholder="Enter image URL"><br>
+
+            <label for="h1Text">Text for H1:</label>
+            <input type="text" id="h1Text" name="h1Text" placeholder="Enter text for H1"><br>
+
+            <label for="h2Text">Text for H2:</label>
+            <input type="text" id="h2Text" name="h2Text" placeholder="Enter text for H2"><br>
+
+            <label for="h3Text">Text for H3:</label>
+            <input type="text" id="h3Text" name="h3Text" placeholder="Enter text for H3"><br>
+
+            <button type="button" id="submitBtn">Add to Slider</button>
+
+            <br>
+            <button type="button" id="return_nlp"><a href="index.html">Home</a></button>
+            <button type="button" id="submit-request"><a href="indexlg.html">Geolocator</a></button>
+            <button type="button" id="submit-request"><a href="indexc.html">Communication Suite</a></button>
+        </form>
+
+
+        <script src="scriptp.js"></script>
+    </body>
+
+    </html>

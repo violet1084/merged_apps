@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Merged_Apps/Communication Suite</title>
+  <link rel="stylesheet" href="stylec.css">
+
+</head>
+
+<body>
+
+<nav class="nav" id="nav">
+
+    <a href="index.html">Home</a>&nbsp;
+
+    <a href="indexp.html">Parallax</a>&nbsp;
+
+    <a href="indexlg.html">Geolocator</a>&nbsp;
+
+</nav>
+<!-- Splash Screen -->
+<div id="splashScreen">
+    
+    <button id="btnApp1">Lawn Sign</button>
+    <button id="btnApp2">Public Voice</button>
+    <h1>Network_Connector</h1>
+</div>
+
+<!-- Application 1 -->
+<div id="app1" style="display:none;">
+    
+    <!-- Content from the first application's HTML -->
+    <div id="slider" class="swipe">
+       
+        <br>
+        <div class="swipe-wrap">
+            <!-- Slides will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Slider Input Form -->
+    <form id="sliderInputForm">
+        <button onclick="hideApplication('app1')">Hide Lawn Sign</button>
+        <br>
+        <label for="backgroundImageURL">Background Image URL:</label>
+        <input type="text" id="backgroundImageURL" placeholder="Enter image URL"><br>
+        <label for="h1Text">Text for H1:</label>
+        <input type="text" id="h1Text" placeholder="Enter text for H1"><br>
+        <label for="h2Text">Text for H2:</label>
+        <input type="text" id="h2Text" placeholder="Enter text for H2"><br>
+        <label for="h3Text">Text for H3:</label>
+        <input type="text" id="h3Text" placeholder="Enter text for H3"><br>
+        <button type="button" id="submitBtn">Add to Slider</button>
+    </form>
+    
+
+</div>
+
+<!-- Application 2 -->
+<div id="app2" style="display:none;">
+    
+    <!-- Content from the second application's HTML -->
+    <div id="controlBar">
+        <button onclick="hideApplication('app2')">Hide Public Voice</button>
+        <input type="file" id="fileToLoad"><br>
+        <button id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()">TALK/SEND</button>
+        <br>
+        <button id="myQ" onmousedown="playBack()">PLAY BACK</button>
+        <br>
+        <button id="myS" onmousedown="fullScan()">LOOP</button>
+        <br>
+        <button id="myT" onmousedown="hideBar()">HIDE</button>
+        <br>
+        <button id="myBtn" onmousedown="showUploads()">SHOW UPLOADS</button>
+        <br>
+        <audio id="recordedAudio"></audio>
+    </div>
+   
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h1>Uploaded Files:</h1>
+            <span class="close" id="close">&times;</span>
+            
+            <p></p>
+        </div>
+    </div>
+</div>
+
+<script src="scriptc.js" ></script>
+
+</body>
+</html>

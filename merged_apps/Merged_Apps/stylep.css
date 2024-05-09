@@ -1,0 +1,123 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    font-family: lato;
+      background-image: url("https://cdn.pixabay.com/photo/2019/07/07/11/20/photo-gallery-4322296_640.jpg");
+      background-size: cover;
+}
+
+.swipe {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.swipe-wrap {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    perspective: 800px;
+    perspective-origin: 50% 0;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+}
+
+.swipe-wrap > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transform-style: preserve-3d;
+    opacity: 0; /* Hide all slides initially */
+    transition: opacity 1.5s ease-in-out; /* Transition for fade effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.swipe-wrap > div.active {
+    opacity: 1; /* Show active slide */
+}
+
+h1, h2, h3 {
+    font-size: 4em;
+    font-weight: 300;
+    opacity: 0; /* Initially hidden */
+    transform: translate3d(0, -50px, 0);
+    transition: opacity 1s ease, transform 1s ease; 
+   -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;  
+  /* Transition for text elements */
+}
+
+.swipe-wrap > div.active h1 {
+    transition-delay: 0.5s; /* Delayed transition for staggering effect */
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.swipe-wrap > div.active h2 {
+    transition-delay: 0.7s; /* Delayed transition for staggering effect */
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.swipe-wrap > div.active h3 {
+    transition-delay: 0.9s; /* Delayed transition for staggering effect */
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+#sliderInputForm {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #83ad41;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 2; /* Ensure form is above slider */
+}
+
+#sliderInputForm label, #sliderInputForm input, #sliderInputForm button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#sliderInputForm label {
+    margin-bottom: 5px;
+}
+
+#sliderInputForm input {
+    width: calc(100% - 20px);
+    background-color: #ecce6c;
+    padding: 6%;
+    border-color:#c32e3b;
+    border-radius: 20%;
+}
+
+#sliderInputForm button {
+    width: 100%;
+    font-size: 16px;
+    padding: 6%;
+    border-radius: 20%;
+    background-color: #ecce6c;
+    border-color:#c32e3b ;
+}
+
